@@ -1,0 +1,7 @@
+---
+name: greet
+pack: comafi
+description: "Hola Comafi"
+action_ref: "comafi.hola"
+formats:
+  - "hola {{saludo}}"

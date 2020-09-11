@@ -1,0 +1,40 @@
+---
+# Pack reference. It can only contain lowercase letters, digits and underscores.
+# This attribute is only needed if "name" attribute contains special characters.
+ref: comafi
+# User-friendly pack name. If this attribute contains spaces or any other special characters, then
+# the "ref" attribute must also be specified (see above).
+name: API Orquestadora PoC
+# User-friendly pack description.
+description: Prueba de concepto para los primeros casos de uso de aprovisionamiento de infraestructura
+# Keywords which are used when searching for packs.
+keywords:
+    - comafi
+    - poc
+# Pack version which must follow semver format (<major>.<minor>.<patch> e.g. 1.0.0)
+version: 0.1.0
+# A list of major Python versions pack is tested with and works with.
+python_versions:
+  - "2"
+  - "3"
+# New in StackStorm 3.2
+# Specify a list of dependency packs to install. If the pack is in StackStorm Exchange you can use
+# the pack name, or you can specify a full Git repository URL. Optionally, you can specify the
+# exact version, tag, or branch.
+dependencies:
+  - core
+  - kubernetes
+  - ansible
+  - terraform
+  - servicenow
+  - aws
+  - azure
+  - vsphere
+# Name of the pack author.
+author: Sales Vision SA. Buenos Aires. Argentina
+# Email of the pack author.
+email: fernando.gonzalez@semperti.com
+# Optional list of additional contributors to the pack.
+contributors:
+  - "Fernando Gonzalez <fernando.gonzalez@semperti.com>"
+  - "Marko Aular <markoantonio.aular@semperti.com>"

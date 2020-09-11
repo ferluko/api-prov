@@ -1,0 +1,13 @@
+---
+name: hola
+pack: comafi
+runner_type: "local-shell-script"
+description: Hola Comafi!
+enabled: true
+entry_point: hola.sh
+parameters:
+    saludo:
+        type: string
+        description: Los saludos que quieres pasar (ej. Hola, Que tal, Hi, etc.)
+        required: true
+        position: 1
