@@ -1,19 +1,21 @@
 version: 1.0
 description: A basic workflow that creates an Openshift new project.
 input:
+  - body
   - payload
+  - table
 tasks:
-  ocp-new-project:
-    action: kubernetes.createCoreV1Namespace
-    payload: <% $.payload %>
+  open_snow_ticket:
+    action: servicenow.insert payload=<% ctx(payload) %> table=<% ctx(table) %>
+    next:
+      - when: <% succeeded() %>
+        #publish:
+          #- stdout: <% result().number %>
+        do: ocp_new_project
+  ocp_new_project:
+    action: kubernetes.createCoreV1Namespace body=<% ctx().body %>
     next:
       - when: <% succeeded() %>
         publish:
           - stdout: <% result().stdout %>
           - stderr: <% result().stderr %>
-        #do: update-snow-incident
-  #update-snow-incident:
-    #action: servicenow.
-  
-output:
-  - stdout: <% ctx(stdout) %>

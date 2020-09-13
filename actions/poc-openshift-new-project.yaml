@@ -1,0 +1,21 @@
+---
+name: poc-openshift-new-project
+pack: comafi
+description: solicitud y creación de nuevo proyecto en Openshift por medio de sequential workflow.
+runner_type: orquesta
+entry_point: workflows/poc-openshift-new-project.yaml
+enabled: true
+parameters:
+  body:
+    type: "object"
+    description: "Data for Openshift New Project"
+    required: true
+  payload:
+    type: "object"
+    description: "Data for ServiceNow, for example caller_id"
+    required: true
+  table:
+    type: "string"
+    description: "Incident or Change?"
+    required: true
+    default: "incident"
