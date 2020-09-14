@@ -12,7 +12,7 @@ keywords:
     - comafi
     - poc
 # Pack version which must follow semver format (<major>.<minor>.<patch> e.g. 1.0.0)
-version: 0.1.0
+version: 0.1.1
 # A list of major Python versions pack is tested with and works with.
 python_versions:
   - "2"
@@ -23,11 +23,11 @@ python_versions:
 # exact version, tag, or branch.
 dependencies:
   - core
+  - linux
   - kubernetes
   - ansible
   - terraform
   - servicenow
-  - aws
   - azure
   - vsphere
 # Name of the pack author.

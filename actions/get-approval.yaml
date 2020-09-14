@@ -1,0 +1,14 @@
+---
+name: get-approval
+pack: comafi
+description: Run an orquesta workflow to show approval process
+runner_type: orquesta
+entry_point: workflows/get-approval.yaml
+enabled: true
+parameters:
+  cmd:
+    required: true
+    type: string
+  timeout:
+    type: integer
+    default: 60
