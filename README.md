@@ -19,6 +19,8 @@ curl -sSL https://stackstorm.com/packages/install.sh | bash -s -- --user=st2admi
 Documentación: https://docs.stackstorm.com/install/index.html
 
 ## Instalación del pack
+#### Pre-requisitos
+* Python 3 pip: ```sudo apt install pyhton-pip```
 ```
 st2 pack install https://github.com/ferluko/api-prov
 ```
